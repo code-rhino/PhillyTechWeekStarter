@@ -11,13 +11,7 @@ import { PostServiceProvider } from '../providers/post-service/post-service';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { UserServiceProvider } from '../providers/user-service/user-service';
 import { ChatsServiceProvider } from '../providers/chats-service/chats-service';
-import {PipesModule} from '../pipes/pipes.module';
-import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
-import {AngularFireModule} from 'angularfire2';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import {AngularFireAuthModule} from 'angularfire2/auth';
-import { FIREBASE_CREDENTIALS } from '../firebase.credentials';
 
 @NgModule({
   declarations: [
@@ -27,7 +21,6 @@ import { FIREBASE_CREDENTIALS } from '../firebase.credentials';
   imports: [
     BrowserModule,
     HttpClientModule,
-    PipesModule,
     FormsModule,
     IonicModule.forRoot(MyApp)
   ],
@@ -43,8 +36,7 @@ import { FIREBASE_CREDENTIALS } from '../firebase.credentials';
     PostServiceProvider,
     UserServiceProvider,
     ChatsServiceProvider,
-    UserServiceProvider,
-    AuthServiceProvider
+    UserServiceProvider
   ]
 })
 export class AppModule {}

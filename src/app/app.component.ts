@@ -12,40 +12,14 @@ import { HomePage } from '../pages/home/home';
   }
 })
 export class MyApp {
-  public rootPage: string;
+  public rootPage: any;
 
   public nav: any;
 
-  public pages = [
-    {
-      title: 'Home',
-      icon: 'ios-home-outline',
-      count: 0,
-      component: HomePage
-    },
-    {
-      title: 'Contacts',
-      icon: 'ios-person-outline',
-      count: 0,
-      component: "ContactsPage"
-    },
-    {
-      title: 'Message',
-      icon: 'ios-mail-outline',
-      count: 2,
-      component: "ChatsPage"
-    },
-    {
-      title: 'Logout',
-      icon: 'ios-log-out-outline',
-      count: 0,
-      component: "LoginPage"
-    },
-
-  ];
+  public pages = [];
 
   constructor(public platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-    this.rootPage = "LoginPage";
+    this.rootPage = HomePage;
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
